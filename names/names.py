@@ -1,7 +1,7 @@
+from binary_search_tree import BinarySearchTree
 import time
 import sys
 sys.path.append('../binary_search_tree')
-from binary_search_tree import BinarySearchTree
 
 start_time = time.time()
 
@@ -24,5 +24,7 @@ for name_2 in names_2:
         duplicates.append(name_2)
 
 end_time = time.time()
-print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
-print (f"runtime: {end_time - start_time} seconds")
+print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
+print(f"runtime: {end_time - start_time} seconds")
+
+# I think the runtime complexity of the starter code was O(n^2) since we had a loop inside of another loop and we did not change the amount of data we were looping through, each element in the first loop required a loop through the second set of data, so O(n * n) which is O(n^2)
