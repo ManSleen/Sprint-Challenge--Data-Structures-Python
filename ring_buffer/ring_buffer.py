@@ -8,14 +8,13 @@ class RingBuffer:
         return f"Buffer: {self.storage}"
 
     def append(self, item):
-        pass
+        if self.current == len(self.storage):
+            self.current = 0
+            self.storage[self.current] = item
+            self.current += 1
+        else:
+            self.storage[self.current] = item
+            self.current += 1
 
     def get(self):
         return [i for i in self.storage if i is not None]
-
-
-ring = RingBuffer(3)
-
-print(ring)
-
-print(ring.get())
