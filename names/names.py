@@ -15,7 +15,6 @@ f.close()
 
 duplicates = []
 bst1 = BinarySearchTree("Michael VanSleen")
-bst2 = BinarySearchTree("Joseph Rios")
 
 for name_1 in names_1:
     bst1.insert(name_1)
